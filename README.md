@@ -1,5 +1,7 @@
-Flask - React - App:
+* Flask - React - App:
 __________________________
+
+** Running:
 
 rootdirc:
 
@@ -8,7 +10,6 @@ rootdirc:
 cd frontend
 
         npm i
-
 
 cd backend
 
@@ -21,7 +22,7 @@ rootdirc:
 
 __________________________
 
-Setup:
+** Setup:
 
 FrontEnd:
 
@@ -29,10 +30,9 @@ FrontEnd:
         cd frontend 
         npx create-react-app .
 
-Add in package.json:
+- Added in package.json:
 
-         "proxy": "http://localhost:5000"
-
+        "proxy": "http://localhost:5000"
 
 BackEnd: 
 
@@ -48,15 +48,17 @@ BackEnd:
         (venv) $ pip install flask python-dotenv
         (venv) $ pip install -U flask-cors
 
-DataBase: Run a PostGreSQL Docker:
+DataBase:
+
+- Run a PostGreSQL Docker:
 
         docker run --name postgresql-container -p 5432:5432 -e POSTGRES_PASSWORD=somePassword -d postgres
 
-or Run for docker-compose.yml: 
+- or Run for docker-compose.yml: 
 
         docker-compose up -d
 
-How to get in the PostgrasCLI:
+- How to get in the PostgrasCLI:
 
         docker exec -it 94f4bb9788fd bash
 
@@ -64,15 +66,15 @@ How to get in the PostgrasCLI:
 
         Quit:   \q
 
-Run PgAdmin
+- Run PgAdmin
 
-Config: If import in app.py is buggy add in .vscode/settings.json::
 
-        "python.pythonPath": "/path/to/your/venv/bin/python"
-
-Init & Migrate DB with Flask-Migrate (flask db)
+- Init & Migrate DB with Flask-Migrate (flask db)
 
         flask db init
         flask db migrate  
 
         
+- Config: If import in app.py is buggy add in .vscode/settings.json::
+
+        "python.pythonPath": "/path/to/your/venv/bin/python"
